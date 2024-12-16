@@ -5,3 +5,21 @@
     one more css for each page that will contain the selected used 
     on that page only (the ones not reused in other pages).
 */
+
+body{
+    background-image: url(https://img.freepik.com/free-vector/blank-blue-halftone-background-vector_53876-144364.jpg?t=st=1734362427~exp=1734366027~hmac=d869dae27d04f3afbf9c3a8dc692a9954a28cd648eae28c55773e4caec2fe2d3&w=1060);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.contenedor{
+    background-color: rgba(255, 255, 255, 0.295);
+    border-radius: 15px;
+    padding:40px;
+    margin-top: 200px ;
+}
+
+.navbarstyle{
+    background-color: rgba(255, 255, 255, 0.363) !important;
+}

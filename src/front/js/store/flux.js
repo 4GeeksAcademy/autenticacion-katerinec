@@ -46,7 +46,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 				//reset the global store
 				setStore({ demo: demo });
-			}, login: async (useNew) => {
+			}, 
+			login: async (useNew) => {
 				try {
 					const resp = await fetch(process.env.BACKEND_URL + "api/login", {
 						method: "POST",
@@ -66,7 +67,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					setStore({user:false})
 					return false
 				} catch (error) {
-					console.log("Error loading message from backend", error)
+					console.log("Error en mensaje del backend", error)
 					setStore({user:false})
 					return false;
 				}
@@ -84,7 +85,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					console.log(resp.status)
 					return true;
 				} catch (error) {
-					console.log("Error loading message from backend", error)
+					console.log("Error en mensaje del backend", error)
 					return false;
 				}
 			},
@@ -95,8 +96,6 @@ const getState = ({ getStore, getActions, setStore }) => {
 						"Content-Type": "application/json",
 						"Authorization": "Bearer " + localStorage.getItem("access_token") 
 					},
-					
-
 				})
 				const data=await resp.json()
 				if (resp.ok){
@@ -105,7 +104,6 @@ const getState = ({ getStore, getActions, setStore }) => {
 				}
 				setStore({user:false})
 					return false
-
 			}
 		}
 	};
