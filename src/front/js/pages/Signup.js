@@ -10,13 +10,16 @@ export const Signup = () => {
 	const[password,setPassword]=useState("")
 
 	const add = async (e)=>{
-     e.preventDefault()
-	 let newUser = {
-		name : name,
-		email : email,
-		password : password
-	 }
-	}
+		e.preventDefault()
+		let newUser = {
+		   name : name,
+		   email : email,
+		   password : password
+   
+	   }
+	   let resp = await actions.signup(newUser)
+	   console.log(resp)
+	   }
 	
 	return (
 		<div className="container text-primary contenedor">
