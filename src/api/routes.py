@@ -24,7 +24,8 @@ def handle_hello():
 
     return jsonify(response_body), 200
 
-@api.route('/signup', methods=['POST']) 
+@api.route('/signup', methods=['POST'])
+
 def register():
 
     data= request.json
@@ -46,12 +47,11 @@ def register():
     return jsonify({"message":"User created successfully"}),200
 
 
-        #ceci tengo una pregunta en el post de arriba 
+
 @api.route('/login', methods=['POST'])
 def login():
 
     data= request.json
-    #info desde el frontend
     email = data.get("email")
     password = data.get("password")
 
@@ -61,6 +61,7 @@ def login():
 
     access_token = create_access_token(identity=email)
     return jsonify(access_token=access_token, user=user.serialize()),200
+
 
 @api.route('/private', methods=['GET'])
 @jwt_required()

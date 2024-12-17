@@ -10,7 +10,7 @@ export const Home = () => {
 
 	return (
 		<>
-		{store.token==null? < Navigate to="/login"/>:<h1>Tienes acceso a la vista privada</h1>}
+		{store.token==null? < Navigate to="/login"/>:<h1>Bienvenido/a</h1>}
 		</>
 	);
 };
