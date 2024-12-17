@@ -18,10 +18,6 @@ export const Signup = () => {
 	 }
 	}
 	
-
-	
-	
-
 	return (
 		<div className="container text-primary contenedor">
 			<h1 className="text-center text-light">Registrarse</h1>

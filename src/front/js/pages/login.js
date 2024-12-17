@@ -1,7 +1,5 @@
 import React, { useState, useContext } from "react";
 import { useNavigate , Link} from "react-router-dom";
-import {Styles} from "../../styles/home.css"
- 
 
 import { Context } from "../store/appContext";
 

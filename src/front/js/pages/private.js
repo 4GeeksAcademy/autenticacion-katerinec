@@ -5,13 +5,7 @@ export const Private = ()=>{
     const { store } = useContext(Context);
     const usuario = localStorage.getItem("access_token")
     useEffect(() => {
-
-
-
     },[])
-    
-
- 
     return(
         <div>{usuario}</div>
     );
